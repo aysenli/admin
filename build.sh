@@ -28,12 +28,10 @@ if [ $CHANNEL = "release" ]; then
     composer install --no-dev -vvv;
 fi;
 
-
-
 # 静态代码检查
-$PHPMD ./app text unusedcode, codesize
+if [ ! -f "$PHPMD" ]; then
+    $PHPMD ./app text unusedcode, codesize
+fi 
 
+# 优化自动加载
 composer dump-autoload --optimize
-
-
-

@@ -1,10 +1,10 @@
 <?php 
 
-namespace Vendor\zhuayi;
+namespace Zhuayi\BaseAdmin;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
-class ServiceProvider extends LaravelServiceProvider {
+class BaseAdminServiceProvider extends LaravelServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -20,6 +20,9 @@ class ServiceProvider extends LaravelServiceProvider {
      */
     public function boot() {
 
+        $this->publishes([
+            __DIR__.'/config/entrust.php' => config_path('entrust.php'),
+        ]);
         // $this->handleConfigs();
         // $this->handleMigrations();
         // $this->handleViews();
@@ -71,7 +74,7 @@ class ServiceProvider extends LaravelServiceProvider {
 
     private function handleMigrations() {
 
-        $this->publishes([__DIR__ . '/../migrations' => base_path('database/migrations')]);
+        $this->publishes([__DIR__ . '../database/migrations' => base_path('database/migrations')]);
     }
 
     private function handleRoutes() {

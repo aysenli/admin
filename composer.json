@@ -1,16 +1,14 @@
 {
-    "name": "zhuayi/compose-laravel",
+    "name": "zhuayi/zhuayi",
     "description": "test",
-    "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "~5.1.0",
-        "zizaco/entrust": "dev-laravel-5"
-    },
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "zhuayi",
             "email": "2179942@qq.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }

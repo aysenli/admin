@@ -29,9 +29,10 @@ if [ $CHANNEL = "release" ]; then
 fi;
 
 # 静态代码检查
-if [ ! -f "$PHPMD" ]; then
+if [ -f "$PHPMD" ]; then
     $PHPMD ./app text unusedcode, codesize
 fi 
+
 
 # 优化自动加载
 composer dump-autoload --optimize

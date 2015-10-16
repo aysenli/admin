@@ -23,6 +23,15 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
         $this->publishes([
             __DIR__.'/config/entrust.php' => config_path('entrust.php'),
         ]);
+
+        $this->publishes([
+            __DIR__.'/database/migrations/' => database_path('/migrations'),
+        ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/database/seeds/' => database_path('/seeds'),
+        ], 'seeds');
+
         // $this->handleConfigs();
         // $this->handleMigrations();
         // $this->handleViews();

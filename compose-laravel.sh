@@ -18,8 +18,10 @@ curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/build.s
 
 
 # # 下载 composer.json
-# curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/composer.json -o $DIRECTORY/composer.json;
+curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/composer.json -o $DIRECTORY/composer.json;
 
 # # 执行 build 脚本, 安装 debug
 
-# sh $DIRECTORY/build.sh debug
+php artisan vendor:publish
+
+sh $DIRECTORY/build.sh debug

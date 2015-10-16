@@ -15,3 +15,5 @@ chmod -R 777 $DIRECTORY/storage $DIRECTORY/bootstrap/cache
 # 下载 build 脚本
 curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/build.sh -O $DIRECTORY/build.sh;
 
+# 下载 composer.json
+curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/composer.json -O $DIRECTORY/composer.json;

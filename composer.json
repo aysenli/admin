@@ -1,32 +1,16 @@
 {
-  "name": "zhuayi/compose-laravel",
-  "type": "library",
-  "description": "A simple API extension for DateTime.",
-  "keywords": [
-    "admin",
-    "adminlte",
-    "DateTime"
-  ],
-  "homepage": "http://www.baidu.com",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "zhuayi",
-      "email": "2179942@qq.com",
-      "homepage": "http://www.baidu.com"
-    }
-  ],
-  "require": {
-    "php": ">=5.5.9",
-    "laravel/framework": "~5.1.0",
-    "zizaco/entrust": "dev-laravel-5"
-  },
-  "require-dev": {
-    "phpmd/phpmd" : "@stable"
-  },
-  "autoload": {
-    "psr-0": {
-      "Zhuayi": "src"
-    }
-  }
+    "name": "zhuayi/compose-laravel",
+    "description": "test",
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "~5.1.0",
+        "zizaco/entrust": "dev-laravel-5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhuayi",
+            "email": "2179942@qq.com"
+        }
+    ]
 }

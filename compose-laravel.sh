@@ -25,3 +25,5 @@ curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/compose
 php artisan vendor:publish
 
 sh $DIRECTORY/build.sh debug
+
+php artisan db:seed --class="AdminDataSeeder";

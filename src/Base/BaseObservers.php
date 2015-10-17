@@ -2,7 +2,7 @@
 
 namespace Zhuayi\BaseAdmin\Base;
 
-use App\Models\ModelLog;
+use Zhuayi\BaseAdmin\Models\ModelLog;
 use Request;
 use Auth;
 

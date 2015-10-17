@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Zhuayi\Models\Menu;
+use Zhuayi\BaseAdmin\Models\Menu;
 use App\Models\User;
 use Redirect;
 use Zhuayi\BaseAdmin\Models\Role;
@@ -15,6 +15,16 @@ use DB;
 
 class AdminController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function Index()
+    {
+        return view('admin.index', ['title' => '首页', 'menus' => Menu::get()]);
+    }
+
     /**
      * Display a listing of the resource.
      *

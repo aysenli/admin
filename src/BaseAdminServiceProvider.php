@@ -32,6 +32,15 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
             __DIR__.'/database/seeds/' => database_path('/seeds'),
         ], 'seeds');
 
+        $this->publishes([
+            __DIR__.'/views' => base_path('resources/views/admin'),
+        ]);
+
+        $this->publishes([
+             __DIR__.'/public' => public_path('/'),
+        ], 'public');
+
+        include __DIR__.'/routes.php';
         // $this->handleConfigs();
         // $this->handleMigrations();
         // $this->handleViews();
@@ -60,34 +69,4 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
         return [];
     }
 
-    private function handleConfigs() {
-
-        $configPath = __DIR__ . '/../config/packagename.php';
-
-        $this->publishes([$configPath => config_path('packagename.php')]);
-
-        $this->mergeConfigFrom($configPath, 'packagename');
-    }
-
-    private function handleTranslations() {
-
-        $this->loadTranslationsFrom('packagename', __DIR__.'/../lang');
-    }
-
-    private function handleViews() {
-
-        $this->loadViewsFrom('packagename', __DIR__.'/../views');
-
-        $this->publishes([__DIR__.'/../views' => base_path('resources/views/vendor/packagename')]);
-    }
-
-    private function handleMigrations() {
-
-        $this->publishes([__DIR__ . '../database/migrations' => base_path('database/migrations')]);
-    }
-
-    private function handleRoutes() {
-
-        include __DIR__.'/../routes.php';
-    }
 }

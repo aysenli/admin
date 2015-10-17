@@ -2,7 +2,7 @@
 
 namespace Zhuayi\BaseAdmin\Models;
 
-use Config,Auth;
+use Auth;
 
 class Menu {
 
@@ -10,23 +10,11 @@ class Menu {
      * 获取菜单
      */
     public static function get() {
-        // $user = Auth::user();
-       
-        // $roles = $user->roleInfo();
-        // $menus = Config::get('menu');
-        // $user_menu = array();
-
-        // foreach ($roles as $role) {
-
-        //     foreach ($menus as $key => $menu) {
-        //         if (in_array($role['name'], $menu[3])) {
-        //             $user_menu[$key] = $menu;
-        //         }
-        //     }
-        // }
-        // return $user_menu;
-
-        $permission = Auth::user()->roleInfo()['permission'];
+        if (Auth::user()) {
+            $permission = Auth::user()->roleInfo()['permission'];
+        } else {
+            return '';
+        }
         return self::menuHtml($permission);
     }
 

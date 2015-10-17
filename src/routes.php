@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => ['auth']], function() {
+Route::group(['middleware' => ['admin']], function() {
   Route::get('/home', function() {
       return redirect('/');
   });

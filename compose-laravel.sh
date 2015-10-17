@@ -17,13 +17,14 @@ chmod -R 777 $DIRECTORY/storage $DIRECTORY/bootstrap/cache
 curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/build.sh -o $DIRECTORY/build.sh;
 
 
-# # 下载 composer.json
+# 下载 composer.json
 curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/composer.json -o $DIRECTORY/composer.json;
 
-# # 执行 build 脚本, 安装 debug
+# 执行 build 脚本, 安装 debug
 
-php artisan vendor:publish
+php artisan vendor:publish --force
 
 sh $DIRECTORY/build.sh debug
 
+php artisan migrate:refresh
 php artisan db:seed --class="AdminDataSeeder";

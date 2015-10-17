@@ -15,3 +15,23 @@ curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/compose
 ### 安装到指定目录
 
 compose-laravel.sh  you DIRECTORY
+
+###安装配置
+
+App/Http/Kernel.php 下的routeMiddleware 增加 权限中间件
+
+```php
+'admin' => \Zhuayi\BaseAdmin\Middleware\AdminMiddleware::class
+```
+
+Config 文件下的providers数组增加依赖
+
+```php
+Zhuayi\BaseAdmin\BaseAdminServiceProvider::class,
+```
+
+执行安装命令
+
+```php
+php artisan vendor:publish --force
+```

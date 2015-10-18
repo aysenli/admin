@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Zhuayi\\BaseAdmin\\": "src/"
+            "Zhuayi\\base_admin\\": "src/"
         }
     },
     "minimum-stability": "dev"

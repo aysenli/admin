@@ -10,7 +10,7 @@
 ## 创建一个新的laravel项目
 
 ### 安装到当前目录
-curl -sS https://raw.githubusercontent.com/zhuayi/compose-laravel/master/compose-laravel.sh | sh
+curl -sS https://raw.githubusercontent.com/zhuayi/base_admin/master/compose-laravel.sh | sh
 
 ### 安装到指定目录
 

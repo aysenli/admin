@@ -23,5 +23,5 @@
             "Zhuayi\\BaseAdmin\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "dev"
 }

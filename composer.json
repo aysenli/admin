@@ -15,6 +15,9 @@
         "laravel/framework": "~5.1.0",
         "zizaco/entrust": "dev-laravel-5"
     },
+    "require-dev": {
+        "phpmd/phpmd" : "@stable"
+    },
     "autoload": {
         "psr-4": {
             "Zhuayi\\BaseAdmin\\": "src/"

@@ -1,6 +1,6 @@
 {
     "name": "zhuayi/base_admin",
-    "description": "test",
+    "description": "基于Laravel和AdminLte的搭建的后台权限系统",
     "type": "library",
     "license": "MIT",
     "authors": [

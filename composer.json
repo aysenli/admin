@@ -14,5 +14,10 @@
         "php": ">=5.5.9",
         "laravel/framework": "~5.1.0",
         "zizaco/entrust": "dev-laravel-5"
-    }
+    },
+    "autoload": {
+        "psr-4": {
+            "Zhuayi\\BaseAdmin\\": "src/"
+        }
+    },
 }

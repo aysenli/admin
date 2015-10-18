@@ -2,6 +2,7 @@
     "name": "zhuayi/base_admin",
     "description": "基于Laravel和AdminLte的搭建的后台权限系统",
     "type": "library",
+    "keywords": ["admin","laravel","illuminate","auth","roles","acl","permission"],
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +10,6 @@
             "email": "2179942@qq.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "~5.1.0",
@@ -22,5 +22,6 @@
         "psr-4": {
             "Zhuayi\\BaseAdmin\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
 }

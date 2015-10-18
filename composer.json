@@ -1,5 +1,5 @@
 {
-    "name": "zhuayi/base-admin",
+    "name": "zhuayi/base_admin",
     "description": "基于Laravel和AdminLte的搭建的后台权限系统",
     "type": "library",
     "keywords": ["admin","laravel","illuminate","auth","roles","acl","permission"],

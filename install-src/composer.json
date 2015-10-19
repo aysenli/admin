@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "zhuayi/admin": "~1.1.5"
+        "zhuayi/admin": "~1.0.0"
     },
     "require-dev": {
     },

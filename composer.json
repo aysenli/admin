@@ -16,7 +16,10 @@
         "zizaco/entrust": "~1.4.1"
     },
     "require-dev": {
-        "phpmd/phpmd" : "@stable"
+        "phpunit/phpunit": "~4.1",
+        "mockery/mockery": "dev-master",
+        "illuminate/database": "~5.0",
+        "sami/sami": "dev-master"
     },
     "autoload": {
         "psr-4": {

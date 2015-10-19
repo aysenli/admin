@@ -38,7 +38,5 @@ php artisan vendor:publish --force
 composer dump-autoload --optimize;
 
 # Run db-seed
-php artisan db:seed --class="AdminDataSeeder"
-
-# php artisan migrate:refresh
-# php artisan db:seed --class="AdminDataSeeder";
+php artisan migrate:refresh
+php artisan db:seed --class="AdminDataSeeder";

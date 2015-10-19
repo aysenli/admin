@@ -11,7 +11,7 @@
         <!-- Bootstrap 3.3.2 -->
         <link href="{{ asset("/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
         <!-- Font Awesome Icons -->
-        <link href="{{ asset("/awesome/fonts/font-awesome.min.css") }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset("/awesome/font/font-awesome.min.css") }}" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="{{ asset("/admin-lte/ionicons.min.css") }}" rel="stylesheet" type="text/css" />
 

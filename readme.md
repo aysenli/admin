@@ -47,9 +47,18 @@ Run autoload
 composer dump-autoload --optimize
 ```
 
-
-
 Run db:seed
 ```shell
 php artisan db:seed --class="AdminDataSeeder"
+```
+
+##Usage
+
+Your Application Routes in 
+
+```php
+Route::group(['middleware' => ['admin']], function() {
+
+
+});
 ```

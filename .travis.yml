@@ -10,8 +10,8 @@ matrix:
     - php: 7.0
 
 before_script:
-  - travis_retry composer self-update
-  - travis_retry composer install --no-interaction --prefer-source
+  - travis_retry composer self-update -vvv
+  - travis_retry composer install --no-interaction --prefer-source -vvv
 
 script:
-  - vendor/bin/phpmd ./vendor/zhuayi/admin text unusedcode
+  - vendor/bin/phpmd ./ text unusedcode

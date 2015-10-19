@@ -9,7 +9,7 @@
 
 ## Installation
 ---
-In order to install Laravel 5 Entrust, just add
+In order to install Laravel 5 Zhuayi, just add
 
 ```php
 "zhuayi/admin": "~1.1.1"

@@ -1,6 +1,6 @@
 <?php
 
-namespace Zhuayi\BaseAdmin\Base;
+namespace Zhuayi\admin\Base;
 
 use Illuminate\Http\Request;
 

@@ -1,6 +1,6 @@
 <?php
 
-use Zhuayi\BaseAdmin\Base\BaseSeeder;
+use Zhuayi\admin\Base\BaseSeeder;
 
 use Illuminate\Database\Eloquent\Model;
 

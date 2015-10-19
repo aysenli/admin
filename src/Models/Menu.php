@@ -1,6 +1,6 @@
 <?php
 
-namespace Zhuayi\BaseAdmin\Models;
+namespace Zhuayi\admin\Models;
 
 use Auth;
 

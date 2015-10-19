@@ -1,13 +1,13 @@
 <?php
 
-namespace Zhuayi\BaseAdmin\Base;
+namespace Zhuayi\admin\Base;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-use Zhuayi\BaseAdmin\Models\Permission;
+use Zhuayi\admin\Models\Permission;
 
-use Zhuayi\BaseAdmin\Models\Role;
+use Zhuayi\admin\Models\Role;
 
 
 class BaseSeeder extends Seeder {

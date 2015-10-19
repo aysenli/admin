@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Zhuayi\BaseAdmin\Models\Menu as BaseAdminMenu;
+use Zhuayi\admin\Models\Menu as BaseAdminMenu;
 
 class Menu extends BaseAdminMenu{
 

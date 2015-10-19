@@ -1,5 +1,5 @@
 {
-    "name": "zhuayi/base_admin",
+    "name": "zhuayi/admin",
     "description": "基于Laravel和AdminLte的搭建的后台权限系统",
     "type": "library",
     "keywords": ["admin","laravel","illuminate","auth","roles","acl","permission"],
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Zhuayi\\base_admin\\": "src/"
+            "Zhuayi\\admin\\": "src/"
         }
     },
     "minimum-stability": "dev"

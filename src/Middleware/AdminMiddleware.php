@@ -1,12 +1,12 @@
 <?php
 
-namespace Zhuayi\BaseAdmin\Middleware;
+namespace Zhuayi\admin\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-use Zhuayi\BaseAdmin\Models\Role;
-use Zhuayi\BaseAdmin\Models\Permission;
+use Zhuayi\admin\Models\Role;
+use Zhuayi\admin\Models\Permission;
 
 class AdminMiddleware
 {

@@ -1,8 +1,8 @@
 <?php 
 
-namespace Zhuayi\BaseAdmin\Base;
+namespace Zhuayi\admin\Base;
 
-use Zhuayi\BaseAdmin\Models\ModelLog;
+use Zhuayi\admin\Models\ModelLog;
 use Request;
 use Auth;
 

@@ -19,7 +19,7 @@ return [
     | the role if it is in a different namespace.
     |
     */
-    'role' => 'Zhuayi\BaseAdmin\Models\Role',
+    'role' => 'Zhuayi\admin\Models\Role',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     | Update the permission if it is in a different namespace.
     |
     */
-    'permission' => 'Zhuayi\BaseAdmin\Models\Permission',
+    'permission' => 'Zhuayi\admin\Models\Permission',
 
     /*
     |--------------------------------------------------------------------------

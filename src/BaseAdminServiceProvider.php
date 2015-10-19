@@ -1,6 +1,6 @@
 <?php 
 
-namespace Zhuayi\BaseAdmin;
+namespace Zhuayi\admin;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 

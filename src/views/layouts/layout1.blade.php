@@ -44,7 +44,7 @@
         @include('admin.layouts.header1')
 
         <!-- Sidebar -->
-        @include('admin.layouts.sidebar1',['menus' => Zhuayi\BaseAdmin\Models\Menu::get()])
+        @include('admin.layouts.sidebar1',['menus' => Zhuayi\admin\Models\Menu::get()])
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->

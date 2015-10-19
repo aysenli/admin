@@ -1,9 +1,9 @@
 <?php 
-namespace Zhuayi\BaseAdmin\Models;
+namespace Zhuayi\admin\Models;
 
 use Zizaco\Entrust\EntrustPermission;
 
-use Zhuayi\BaseAdmin\Base\BaseObservers;
+use Zhuayi\admin\Base\BaseObservers;
 
 class Permission extends EntrustPermission {
 

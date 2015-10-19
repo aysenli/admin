@@ -1,13 +1,13 @@
 <?php
 
-namespace Zhuayi\BaseAdmin;
+namespace Zhuayi\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Zhuayi\BaseAdmin\Models\Permission;
+use Zhuayi\admin\Models\Permission;
 
 class MenuController extends Controller
 {

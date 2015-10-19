@@ -1,16 +1,16 @@
 <?php
 
-namespace Zhuayi\BaseAdmin;
+namespace Zhuayi\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Zhuayi\BaseAdmin\Models\Menu;
+use Zhuayi\admin\Models\Menu;
 use App\Models\User;
 use Redirect;
-use Zhuayi\BaseAdmin\Models\Role;
+use Zhuayi\admin\Models\Role;
 use DB;
 
 class AdminController extends Controller

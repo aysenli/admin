@@ -1,6 +1,6 @@
 <?php
 
-namespace Zhuayi\BaseAdmin;
+namespace Zhuayi\admin;
 
 use Illuminate\Http\Request;
 
@@ -8,8 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Redirect;
 
-use Zhuayi\BaseAdmin\Models\Role;
-use Zhuayi\BaseAdmin\Models\Permission;
+use Zhuayi\admin\Models\Role;
+use Zhuayi\admin\Models\Permission;
 use DB;
 class RoleController extends Controller
 {

@@ -1,9 +1,9 @@
 <?php 
-namespace Zhuayi\BaseAdmin\Models;
+namespace Zhuayi\admin\Models;
 
 use Zizaco\Entrust\EntrustRole;
 
-use Zhuayi\BaseAdmin\Base\BaseObservers;
+use Zhuayi\admin\Base\BaseObservers;
 
 class Role extends EntrustRole
 {
@@ -36,6 +36,6 @@ class Role extends EntrustRole
     {
         //一对多hasMany 生成的sql select * from `users` where `users`.`role_id` = 5 and `users`.`role_id` is not null
         // return $this->hasMany('App\Models\User');
-        return $this->belongsToMany('Zhuayi\BaseAdmin\Models\Permission')->orderBy('id','asc');
+        return $this->belongsToMany('Zhuayi\admin\Models\Permission')->orderBy('id','asc');
     }
 }

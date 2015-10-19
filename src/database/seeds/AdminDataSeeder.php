@@ -4,7 +4,7 @@ use Zhuayi\admin\Base\BaseSeeder;
 
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\User;
+use Zhuayi\admin\Models\User;
 
 // ini_set("display_errors", "On");
 // error_reporting(E_ALL | E_STRICT);

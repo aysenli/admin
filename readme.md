@@ -8,8 +8,16 @@
 
 
 ## Installation
+
+#### New Project installation
+
+In project Finder
+
+```shell
+curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/compose-laravel.sh | sh
+```
 ---
-In order to install Laravel 5 Zhuayi, just add
+####In order to install Laravel 5 Zhuayi, just add
 
 ```php
 "zhuayi/admin": "~1.1.1"

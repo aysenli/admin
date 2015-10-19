@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Zhuayi\admin\Models\Menu;
-use App\Models\User;
+use Zhuayi\admin\Models\User;
 use Redirect;
 use Zhuayi\admin\Models\Role;
 use DB;

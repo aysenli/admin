@@ -36,10 +36,19 @@ Run Publish
 php artisan vendor:publish --force
 ```
 
+modify **config/auth.php**  
+
+```php
+'model' => Zhuayi\admin\Models\User::class
+```
+
 Run autoload
 ```shell
 composer dump-autoload --optimize
 ```
+
+
+
 Run db:seed
 ```shell
 php artisan db:seed --class="AdminDataSeeder"

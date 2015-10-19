@@ -4,34 +4,31 @@
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/admin/admin)
 
 
-## 创建一个新的laravel项目
+## Installation
+---
+In order to install Laravel 5 Entrust, just add
 
-### 安装到当前目录
-curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/compose-laravel.sh | sh
+```php
+"zhuayi/admin": "~1.1.1"
+```
+to your composer.json. Then run composer install or composer update.
 
-### 安装到指定目录
+Then in your config/app.php add
 
-compose-laravel.sh  you DIRECTORY
+```php
+Zhuayi\admin\BaseAdminServiceProvider::class
+```
 
-###安装配置
-
-App/Http/Kernel.php 下的routeMiddleware 增加 权限中间件
-
+If you are going to use Middleware (requires Laravel 5.1 or later) you also need to add
 ```php
 'admin' => \Zhuayi\admin\Middleware\AdminMiddleware::class
 ```
+to routeMiddleware array in app/Http/Kernel.php.
 
-Config 文件下的providers数组增加依赖
-
-```php
-Zhuayi\admin\BaseAdminServiceProvider::class,
-```
-
-执行安装命令
-
+Run
 ```php
 php artisan vendor:publish --force
 ```

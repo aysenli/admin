@@ -14,4 +14,4 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source
 
 script:
-  - vendor/bin/phpmd ./ text unusedcode, codesize
+  - vendor/bin/phpmd ./vendor/zhuayi/admin text unusedcode,codesize

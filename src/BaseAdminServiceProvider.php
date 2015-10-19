@@ -21,7 +21,7 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
     public function boot() {
 
         $this->publishes([
-            __DIR__.'/config/entrust.php' => config_path('entrust.php'),
+            __DIR__.'/Config/entrust.php' => config_path('entrust.php'),
         ]);
 
         $this->publishes([
@@ -37,7 +37,7 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
         ]);
 
         $this->publishes([
-             __DIR__.'/public' => public_path('/'),
+             __DIR__.'/Public' => public_path('/'),
         ], 'public');
 
         include __DIR__.'/routes.php';

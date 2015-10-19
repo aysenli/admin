@@ -33,6 +33,8 @@ curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/install-src/confi
 curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/install-src/app/Http/Kernel.php -o $DIRECTORY/app/Http/Kernel.php;
 
 
+php artisan vendor:publish --force
+
 composer dump-autoload --optimize;
 
 # Run db-seed

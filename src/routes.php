@@ -24,3 +24,7 @@ Route::group(['middleware' => ['admin']], function() {
   Route::get('/admin/menu/', '\Zhuayi\admin\MenuController@index');
   Route::controller('/admin/menu', '\Zhuayi\admin\MenuController');
 });
+
+// --------------------Auth related routes------------------------ 
+Route::controller('auth', 'App\Http\Controllers\Auth\AuthController');
+Route::controller('password', 'App\Http\Controllers\Auth\PasswordController');

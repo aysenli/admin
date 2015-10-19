@@ -33,7 +33,7 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
         ], 'seeds');
 
         $this->publishes([
-            __DIR__.'/views' => base_path('resources/views/admin'),
+            __DIR__.'/views/' => base_path('resources/views/'),
         ]);
 
         $this->publishes([

@@ -28,7 +28,18 @@ If you are going to use Middleware (requires Laravel 5.1 or later) you also need
 ```
 to routeMiddleware array in app/Http/Kernel.php.
 
-Run
-```php
+modify DB info to  **.env**
+
+Run Publish
+```shell
 php artisan vendor:publish --force
+```
+
+Run autoload
+```shell
+composer dump-autoload --optimize
+```
+Run db:seed
+```shell
+php artisan db:seed --class="AdminDataSeeder"
 ```

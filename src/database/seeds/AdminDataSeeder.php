@@ -94,62 +94,6 @@ class AdminDataSeeder extends BaseSeeder
                 );
         }
 
-
-        $perant_id = parent::createPermission("/policy", "", "零售信贷政策管理", 1 , '$');
-        $menuIds[] = $perant_id;
-
-        $menuArray = [];
-        $menuArray = [
-            // 产品管理
-            [
-                "name" => "production",
-                "display_name" => $perant_id,
-                "description" => "产品管理",
-                "isDisplay" => 1,
-                "power" => '(.*)',
-            ],
-            
-
-            //引擎规则管理
-            [
-                "name" => "enginerule",
-                "display_name" => $perant_id,
-                "description" => "引擎规则管理",
-                "isDisplay" => 1,
-                "power" => '(.*)',
-            ],
-
-            //授权模板管理
-            [
-                "name" => "ruletpl",
-                "display_name" => $perant_id,
-                "description" => "授权模板管理",
-                "isDisplay" => 1,
-                "power" => '(.*)',
-            ],
-
-            // 审批授权
-            [
-                "name" => "approver",
-                "display_name" => $perant_id,
-                "description" => "审批授权",
-                "isDisplay" => 1,
-                "power" => '(.*)',
-            ],
-        ];
-
-        foreach ($menuArray as $value) { 
-            
-            $menuIds[] = parent::createPermission(
-                $value['name'], 
-                $value['display_name'], 
-                $value['description'],
-                $value['isDisplay'],
-                $value['power']
-                );
-        }
-
-
         // 添加用户组权限
         $admin->perms()->sync($menuIds);
 

@@ -36,19 +36,19 @@ If you are going to use Middleware (requires Laravel 5.1 or later) you also need
 ```
 to routeMiddleware array in app/Http/Kernel.php.
 
-##configure
-modify DB info to  **.env**
+modify **config/auth.php**  
+
+```php
+'model' => Zhuayi\admin\Models\User::class
+```
 
 Run Publish
 ```shell
 php artisan vendor:publish --force
 ```
 
-modify **config/auth.php**  
-
-```php
-'model' => Zhuayi\admin\Models\User::class
-```
+##configure
+modify DB info to  **.env**
 
 Run autoload
 ```shell

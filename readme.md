@@ -20,7 +20,7 @@ curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/compose-laravel.s
 ####In order to install Laravel 5 Zhuayi, just add
 
 ```php
-"zhuayi/admin": "~1.1.1"
+"zhuayi/admin": "~1.1.4"
 ```
 to your composer.json. Then run composer install or composer update.
 

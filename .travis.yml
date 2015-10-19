@@ -14,4 +14,4 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source -vvv
 
 script:
-  - vendor/bin/phpmd ./ text unusedcode
+  - ls -l

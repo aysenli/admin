@@ -59,6 +59,7 @@ Your Application Routes in
 ```php
 Route::group(['middleware' => ['admin']], function() {
 
+    ...
 
 });
 ```

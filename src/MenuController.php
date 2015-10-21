@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Zhuayi\admin\Models\Permission;
+use Zhuayi\admin\Helper;
 
 class MenuController extends Controller
 {
@@ -25,7 +26,7 @@ class MenuController extends Controller
         } else {
             $show['permissions'] = Permission::all();
         }
-
+        $show['permissions'] = Helper::array_get_tree($show['permissions']->toArray(), 'display_name', 'description');
         return View('admin.menu.index', ['title' => '后台管理 - 权限管理', 'show' => $show]);
     }
 

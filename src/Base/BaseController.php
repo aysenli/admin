@@ -28,4 +28,5 @@ class BaseController extends Controller {
         $show['search'] = $this->search;
         return View($tpl, ['title' => $this->title, 'show' => $show]);
     }
+
 }

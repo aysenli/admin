@@ -14,19 +14,19 @@ class Role extends EntrustRole
     }
 
 
-	public function projects()
-	{
-		// return $this->belongsToMany('App\Models\Project');
-		return $this->hasMany('App\Models\Project');
-	}
+	// public function projects()
+	// {
+	// 	// return $this->belongsToMany('App\Models\Project');
+	// 	return $this->hasMany('App\Models\Project');
+	// }
 
 
-	public function users()
-	{
-		//一对多hasMany 生成的sql select * from `users` where `users`.`role_id` = 5 and `users`.`role_id` is not null
-    	// return $this->hasMany('App\Models\User');
-    	return $this->belongsToMany('App\Models\User');
-	}
+	// public function users()
+	// {
+	// 	//一对多hasMany 生成的sql select * from `users` where `users`.`role_id` = 5 and `users`.`role_id` is not null
+ //    	// return $this->hasMany('App\Models\User');
+ //    	return $this->belongsToMany('App\Models\User');
+	// }
 
 	/**
 	 * 一对一查询permission表, 根据用户角色 ID 获取用户所有权限

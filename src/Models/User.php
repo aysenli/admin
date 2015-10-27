@@ -76,5 +76,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return [ 'role' => $roleArray, 'permission' => $permission];
     }
 
-   
+    public function role() {
+        return $this->belongsToMany('Zhuayi\admin\Models\Role');
+    }
 }

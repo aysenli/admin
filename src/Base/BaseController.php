@@ -29,4 +29,21 @@ class BaseController extends Controller {
         return View($tpl, ['title' => $this->title, 'show' => $show]);
     }
 
+    /**
+     * json Output 支持 jsonp
+     * @param  array $data 数据
+     * @param  int $code 状态吗
+     * @return json
+     */
+    public function json($data, $code) {
+
+        $jsonData = ["data" => $data, "code" => $code];
+        $callback = request()->input('callback');
+        $respose = response()->json($jsonData);
+        if ($callback) {
+          $respose->setCallback($callback);
+        } 
+        
+        return $respose;
+    }
 }

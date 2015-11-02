@@ -1,6 +1,6 @@
 <?php
 
-namespace Zhuayi\admin;
+namespace Zhuayi\admin\base;
 
 use Illuminate\Http\Request;
 
@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use Zhuayi\admin\Models\Permission;
 use Zhuayi\admin\Helper;
 
-class MenuController extends Controller
+class BaseMenuController extends Controller
 {
     /**
      * Display a listing of the resource.

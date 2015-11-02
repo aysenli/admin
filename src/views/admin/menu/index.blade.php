@@ -60,14 +60,14 @@
 
     @foreach ($show['permissions'] as $role)
     <tr> 
-        <td>{{ $role->id }}</td> 
-        <td>{{ $role->description }}</td> 
-        <td>{{ $role->name }}{{ $role->power }}</td> 
-        <td>{{ $role->created_at }}</td> 
-        <td>{{ $role->updated_at }}</td> 
+        <td>{{ $role['id'] }}</td> 
+        <td>{{ $role['description'] }}</td> 
+        <td>{{ $role['name'] }}{{ $role['power'] }}</td> 
+        <td>{{ $role['created_at'] }}</td> 
+        <td>{{ $role['updated_at'] }}</td> 
         <td> 
-            <a type="button" class="btn btn-default" href="/admin/menu/edit/{{ $role->id}}">修改</a> 
-            <a type="button" class="btn btn-default" href="/admin/menu/destroy/{{ $role->id}}">删除</a> 
+            <a type="button" class="btn btn-default" href="/admin/menu/edit/{{ $role['id']}}">修改</a> 
+            <a type="button" class="btn btn-default" href="/admin/menu/destroy/{{ $role['id']}}">删除</a> 
         </td> 
     </tr> 
     @endforeach

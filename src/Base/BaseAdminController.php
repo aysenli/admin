@@ -1,6 +1,6 @@
 <?php
 
-namespace Zhuayi\admin;
+namespace Zhuayi\admin\base;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +13,7 @@ use Redirect;
 use Zhuayi\admin\Models\Role;
 use DB;
 
-class AdminController extends Controller
+class BaseAdminController extends Controller
 {
     /**
      * Display a listing of the resource.

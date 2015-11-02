@@ -20,7 +20,7 @@ curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/build.sh -o $DIRE
 # 下载 composer.json
 curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/install-src/composer.json -o $DIRECTORY/composer.json;
 
-# 执行 build 脚本, 安装 debug
+# 执行 build 脚本, 安装 dev | test | release
 # php artisan vendor:publish --force
 
 sh $DIRECTORY/build.sh debug

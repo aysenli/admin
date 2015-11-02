@@ -19,7 +19,7 @@
                 @if ($item->type == 'select')
                 <select class="form-control" name="{{$item->name}}">
                 @foreach($item->value as $key=>$select)
-                  <option value="{{$key}}">{{$select}}</option>
+                  <option value="{{$key}}" {{(Input::get($item->name) == $key)?'selected':''}}>{{$select}}</option>
                 @endforeach
                 </select>
                 @endif

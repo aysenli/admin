@@ -39,6 +39,12 @@ class AdminMiddleware
     {
         // 增加权限验证中间件 modify by renxin 2015/09/25
         if ($request->user()) {
+
+            if ($request->path() == "/") {
+
+                return $next($request);
+            }
+            
             $isNext = false;
             $permission = $this->auth->user()->roleInfo()['permission'];
             

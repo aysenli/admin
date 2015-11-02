@@ -56,7 +56,7 @@ class AdminDataSeeder extends BaseSeeder
         $admin = parent::createRole($this->roleName, "超级管理员组");
 
         $menuIds = array();
-        $perant_id = parent::createPermission("/", "", "管理后台", 1 , '$');
+        $perant_id = parent::createPermission("/admin", "", "管理后台", 1 , '$');
         $menuIds[] = $perant_id;
         $menuArray = [
            [
@@ -82,7 +82,6 @@ class AdminDataSeeder extends BaseSeeder
            ]
         ];
 
-        // $menuIds[] = self::createPermission($this->permission, "", "全部权限", 0, '(.*)');
         foreach ($menuArray as $value) {
             
             $menuIds[] = self::createPermission(

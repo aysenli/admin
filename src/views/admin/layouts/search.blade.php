@@ -8,10 +8,22 @@
     <div class="box-body"> 
        <!-- text input --> 
        <div class="form-group col-xs-12"> 
-            @foreach($show['search'] as $term)
+            @foreach($show['search'] as $item)
             <div class="col-xs-4 box-body">
-                <label><span style="display:block;">{{$term[0]}}：</span></label>
-                <input name="{{$term[1]}}" type="text" class="form-control" placeholder="{{$term[0]}}"  value="{{\Input::get($term[1])}}"/>
+                <label><span style="display:block;">{{$item->title}}：</span></label>
+
+                @if ($item->type == 'text')
+                <input name="{{$item->name}}" type="text" class="form-control" style="width:65%" placeholder="{{$item->title}}"  value="{{\Input::get($item->name)}}"/>
+                @endif
+
+                @if ($item->type == 'select')
+                <select class="form-control" name="{{$item->name}}">
+                @foreach($item->value as $key=>$select)
+                  <option value="{{$key}}">{{$select}}</option>
+                @endforeach
+                </select>
+                @endif
+                
             </div>
             @endforeach
        </div>

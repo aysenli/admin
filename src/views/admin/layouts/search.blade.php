@@ -2,7 +2,7 @@
   <div class="col-lg-12 col-lg-12"> 
   @include('admin.layouts.table_tips')
   <!-- general form elements --> 
-  <form role="form" class="form-inline" method="get"> 
+  <form role="form" class="form-inline" method="get" id="searchForm"> 
    <div class="box "> 
     <!-- /.box-header --> 
     <div class="box-body"> 
@@ -30,7 +30,7 @@
     </div>
     <div class="box-footer">
         <button type="submit" class="btn btn-success">查询</button>   
-        <button type="reset" class="btn btn-primary">重置</button>   
+        <button type="button" class="btn btn-primary" id="reset">重置</button>   
     </div>
     <!-- /.box-header --> 
    </div>
@@ -38,4 +38,11 @@
   </form> 
   </div> 
 </div>
+<script type="text/javascript">
+$(function() {
 
+    $("#reset").click(function(){
+        $("input").not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+    })
+})
+</script>

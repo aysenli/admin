@@ -24,11 +24,20 @@
 
         <link href="{{ asset("/admin-lte/dist/css/skins/skin-red-light.min.css")}}" rel="stylesheet" type="text/css" />
 
+        <link href="{{ asset("/admin-lte/bootstrap/css/bootstrap-datetimepicker.min.css")}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset("/statics/plugin/uploadify/uploadify.css") }}" rel="stylesheet" type="text/css">
         <!-- jQuery 2.1.3 -->
         <script src="{{ asset ("/admin-lte/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
+
+        <script src="{{ asset ("/statics/plugin/uploadify/jquery.uploadify.min.js") }}"></script>
          <!-- Bootstrap 3.3.2 JS -->
         <script src="{{ asset ("/admin-lte/bootstrap/js/bootstrap.js") }}" type="text/javascript"></script>
         
+        <script src="{{ asset ("/admin-lte/bootstrap/js/bootstrap-datetimepicker.js") }}"></script>
+        <script src="{{ asset ("/admin-lte/bootstrap/js/bootstrap-datetimepicker.zh-CN.js") }}"></script>
+
+
+        <script src="{{ asset ("/admin-lte/dist/js/ejs.min.js") }}"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

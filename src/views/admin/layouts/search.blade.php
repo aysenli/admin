@@ -42,7 +42,8 @@
 $(function() {
 
     $("#reset").click(function(){
-        $("input").not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+        $("input",'#searchForm').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked');
+        $("select option",'#searchForm').removeAttr('selected');
     })
 })
 </script>

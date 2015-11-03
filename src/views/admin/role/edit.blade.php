@@ -29,6 +29,11 @@
                             <label><span style="width:155px;display:block;">简介：</span></label>
                             <input name='description' type="text" class="form-control" placeholder="简介" value='{{isset($show['role']->description)?$show['role']->description:''}}'/>
                         </div>
+                        <div class="form-group col-xs-6 col-md-6">
+                            <label><span style="width:155px;display:block;">标示符：</span></label>
+                            <input name='name' type="text" class="form-control" placeholder="标示符" 
+                            value='{{isset($show['role']->name)?$show['role']->name:''}}'/>
+                        </div>
                         <div class="form-group col-xs-12 col-md-12" style="margin-bottom:0px">
                           <label><span style="width:155px;display:block;">权限列表：</span></label>
                         </div>

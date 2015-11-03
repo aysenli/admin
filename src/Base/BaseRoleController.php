@@ -52,7 +52,7 @@ class BaseRoleController extends Controller
     public function create(Request $request)
     {
         $role = new Role;
-        $role->name = trim($request->get('display_name'));
+        $role->name = trim($request->get('name'));
         $role->display_name = trim($request->get('display_name'));
         $role->description = trim($request->get('description'));
         $role->save();
@@ -96,7 +96,7 @@ class BaseRoleController extends Controller
             return redirect()->to('/admin/role/edit/')->withErrors("找不到该角色");
         }
         
-        $role->name = trim($request->get('display_name'));
+        $role->name = trim($request->get('name'));
         $role->display_name = trim($request->get('display_name'));
         $role->description = trim($request->get('description'));
         $role->save();

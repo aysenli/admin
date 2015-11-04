@@ -36,7 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a href="#"><img src="{{ asset("/statics/img/logo_login.png") }}"/></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg"></p>
+        <p class="text-danger">@if($errors->first()) {{ "用户名或密码错误！！" }}  @endif</p>
         <form action="/auth/login" method="post">
           {!! csrf_field() !!}
           <div class="form-group has-feedback">

@@ -3,6 +3,7 @@
 namespace Zhuayi\admin\Models;
 
 use Auth;
+use Zhuayi\admin\Helper;
 
 class Menu {
 
@@ -15,6 +16,7 @@ class Menu {
         } else {
             return '';
         }
+        $permission = Helper::array_get_tree($permission, 'display_name', 'description', 0, 'id', '^', '^');
         return self::menuHtml($permission);
     }
 

@@ -22,7 +22,12 @@ Route::group(['middleware' => ['admin']], function() {
 
   // menu
   Route::get('/admin/menu/', 'App\Http\Controllers\Admin\MenuController@index');
-  Route::controller('/admin/menu', 'App\Http\Controllers\Admin\MenuController');
+  Route::post('/admin/menu/create/', 'App\Http\Controllers\Admin\MenuController@create');
+  Route::post('/admin/menu/store/', 'App\Http\Controllers\Admin\MenuController@store');
+  Route::get('/admin/menu/add/', '\App\Http\Controllers\Admin\MenuController@add');
+  Route::get('/admin/menu/edit/{id}', '\App\Http\Controllers\Admin\MenuController@edit');
+  Route::post('/admin/menu/update/{id}', 'App\Http\Controllers\Admin\MenuController@update');
+  Route::get('/admin/menu/destroy/{id}', 'App\Http\Controllers\Admin\MenuController@destroy');
 });
 
 // --------------------Auth related routes------------------------ 

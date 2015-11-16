@@ -40,6 +40,10 @@ class BaseAdminServiceProvider extends LaravelServiceProvider {
              __DIR__.'/Public' => public_path('/'),
         ], 'public');
 
+        $this->publishes([
+             __DIR__.'/extends' => app_path('/Http/Controllers/Admin/'),
+        ]);
+
         include __DIR__.'/routes.php';
         // $this->handleConfigs();
         // $this->handleMigrations();

@@ -17,7 +17,7 @@ class BaseMenuController extends Controller
      *
      * @return Response
      */
-    public function getIndex()
+    public function index()
     {
         $wherName = trim(\Input::get('name'));
 
@@ -35,7 +35,7 @@ class BaseMenuController extends Controller
      *
      * @return Response
      */
-    public function postCreate(Request $request)
+    public function create(Request $request)
     {
         if ($request->get('id')) {
 
@@ -68,7 +68,7 @@ class BaseMenuController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function getAdd()
+    public function add()
     {
         return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => array()]);
     }
@@ -79,7 +79,7 @@ class BaseMenuController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function getEdit($id)
+    public function edit($id)
     {
         $show['permission'] = Permission::where('id','=', $id)->first();
         return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => $show]);
@@ -115,7 +115,7 @@ class BaseMenuController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function getDestroy($id)
+    public function destroy($id)
     {
         $permission = Permission::where('id','=', $id)->first();
         if (empty($permission)) {

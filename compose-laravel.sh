@@ -1,6 +1,6 @@
 
 if [ $# != 1 ] ; then 
-DIRECTORY="./";
+DIRECTORY="";
 else
 DIRECTORY=$1;
 fi

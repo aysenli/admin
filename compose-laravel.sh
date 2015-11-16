@@ -1,6 +1,6 @@
 
 if [ $# != 1 ] ; then 
-DIRECTORY=pwd;
+DIRECTORY=$(pwd);
 else
 DIRECTORY=$1;
 fi

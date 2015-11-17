@@ -45,6 +45,8 @@ modify **config/auth.php**
 Run Publish
 ```shell
 php artisan vendor:publish --force
+
+php artisan migrate:refresh
 ```
 
 ##configure

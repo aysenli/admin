@@ -1,4 +1,3 @@
-
 if [ $# != 1 ] ; then 
 DIRECTORY=$(pwd);
 else
@@ -36,6 +35,28 @@ curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/install-src/app/H
 php artisan vendor:publish --force
 
 composer dump-autoload --optimize;
+
+# replace .env
+
+read -p "Enter your DB_HOST: "
+DB_HOST=$REPLY
+sed "s/^DB_HOST=.*$/DB_HOST=${DB_HOST}/g" ${DIRECTORY}/.env > ${DIRECTORY}/.env.bak
+mv ${DIRECTORY}/.env.bak ${DIRECTORY}/.env
+
+read -p "Enter your DB_DATABASE: "
+DB_DATABASE=$REPLY
+sed "s/^DB_DATABASE=.*$/DB_DATABASE=${DB_DATABASE}/g" ${DIRECTORY}/.env > ${DIRECTORY}/.env.bak
+mv ${DIRECTORY}/.env.bak ${DIRECTORY}/.env
+
+read -p "Enter your DB_USERNAME: "
+DB_USERNAME=$REPLY
+sed "s/^DB_USERNAME=.*$/DB_USERNAME=${DB_USERNAME}/g" ${DIRECTORY}/.env > ${DIRECTORY}/.env.bak
+mv ${DIRECTORY}/.env.bak ${DIRECTORY}/.env
+
+read -p "Enter your DB_PASSWORD: "
+DB_PASSWORD=$REPLY
+sed "s/^DB_PASSWORD=.*$/DB_PASSWORD=${DB_PASSWORD}/g" ${DIRECTORY}/.env > ${DIRECTORY}/.env.bak
+mv ${DIRECTORY}/.env.bak ${DIRECTORY}/.env
 
 # Run db-seed
 php artisan migrate:refresh

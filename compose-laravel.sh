@@ -1,3 +1,5 @@
+#!/bin/bash
+#
 if [ $# != 1 ] ; then 
 DIRECTORY=$(pwd);
 else
@@ -30,7 +32,6 @@ curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/install-src/confi
 
 # 下载中间件
 curl -sS https://raw.githubusercontent.com/zhuayi/admin/master/install-src/app/Http/Kernel.php -o $DIRECTORY/app/Http/Kernel.php;
-
 
 php artisan vendor:publish --force
 

@@ -82,6 +82,9 @@ class BaseMenuController extends Controller
     public function edit($id)
     {
         $show['permission'] = Permission::where('id','=', $id)->first();
+        $show['permission_list'] = Permission::where("display_name", "=", "")->get();
+        // $show['permission_list'] = Helper::array_get_tree($show['permission_list']->toArray(), 'display_name', 'description');
+     
         return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => $show]);
     }
 

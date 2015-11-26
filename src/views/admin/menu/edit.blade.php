@@ -21,6 +21,14 @@
                     </div><!-- /.box-header -->
                     <div class="box-body table-responsive no-padding">
                         <div class="form-group col-xs-6 col-md-6">
+                            <label><span style="width:155px;display:block;">父类ID：</span></label>
+                            <select class="form-control" name="display_name">
+                            @foreach($show['permission_list'] as $permission)
+                              <option value="{{$permission['id']}}" {{($permission['id'] == $show['permission']->display_name)?'selected':''}}>{{$permission['description']}}</option>
+                            @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group col-xs-6 col-md-6">
                             <label><span style="width:155px;display:block;">权限名称：</span></label>
                             <input name='description' type="text" class="form-control" placeholder="权限名称" 
                             value='{{isset($show['permission']->description)?$show['permission']->description:''}}'/>

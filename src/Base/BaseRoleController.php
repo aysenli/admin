@@ -28,7 +28,7 @@ class BaseRoleController extends Controller
             $show['roles'] = Role::all();
         }
         
-        return View('admin.role.index', ['title' => '后台管理 - 账号管理', 'show' => $show]);
+        return View('admin.role.index', ['title' => '后台管理 - 角色管理', 'show' => $show]);
     }
 
     /**

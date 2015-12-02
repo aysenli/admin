@@ -55,6 +55,7 @@ class BaseMenuController extends Controller
     {
         $permission = new Permission;
         $permission->name = trim($request->get('name'));
+        $permission->display_name = trim($request->get('display_name'));
         $permission->description = trim($request->get('description'));
         $permission->power = trim($request->get('power'));
         $permission->isDisplay = trim($request->get('isDisplay'));
@@ -70,7 +71,9 @@ class BaseMenuController extends Controller
      */
     public function add()
     {
-        return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => array()]);
+        $show['permission_list'] = Permission::where("display_name", "=", "")->get();
+        // $show['permission'] = [];
+        return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => $show]);
     }
 
     /**
@@ -82,6 +85,7 @@ class BaseMenuController extends Controller
     public function edit($id)
     {
         $show['permission'] = Permission::where('id','=', $id)->first();
+        # 获取顶级菜单节点
         $show['permission_list'] = Permission::where("display_name", "=", "")->get();
         // $show['permission_list'] = Helper::array_get_tree($show['permission_list']->toArray(), 'display_name', 'description');
      
@@ -104,6 +108,7 @@ class BaseMenuController extends Controller
         }
         
         $permission->name = trim($request->get('name'));
+        $permission->display_name = trim($request->get('display_name'));
         $permission->description = trim($request->get('description'));
         $permission->power = trim($request->get('power'));
         $permission->isDisplay = trim($request->get('isDisplay'));

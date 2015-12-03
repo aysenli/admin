@@ -27,7 +27,7 @@ class BaseMenuController extends Controller
             $show['permissions'] = Permission::all();
         }
         $show['permissions'] = Helper::array_get_tree($show['permissions']->toArray(), 'display_name', 'description');
-        return View('admin.menu.index', ['title' => '后台管理 - 权限管理', 'show' => $show]);
+        return View('admin.menu.index', ['title' => '后台管理 - 菜单管理', 'show' => $show]);
     }
 
     /**
@@ -73,7 +73,7 @@ class BaseMenuController extends Controller
     {
         $show['permission_list'] = Permission::where("display_name", "=", "")->get();
         // $show['permission'] = [];
-        return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => $show]);
+        return View('admin.menu.edit', ['title' => '后台管理 - 新增菜单', 'show' => $show]);
     }
 
     /**
@@ -89,7 +89,7 @@ class BaseMenuController extends Controller
         $show['permission_list'] = Permission::where("display_name", "=", "")->get();
         // $show['permission_list'] = Helper::array_get_tree($show['permission_list']->toArray(), 'display_name', 'description');
      
-        return View('admin.menu.edit', ['title' => '后台管理 - 权限管理', 'show' => $show]);
+        return View('admin.menu.edit', ['title' => '后台管理 - 修改菜单', 'show' => $show]);
     }
 
     /**

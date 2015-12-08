@@ -21,30 +21,31 @@
                     </div><!-- /.box-header -->
                     <div class="box-body table-responsive no-padding">
                         <div class="form-group col-xs-6 col-md-6">
-                            <label><span style="width:155px;display:block;">父类ID：</span></label>
+                            <label><span style="width:155px;display:block;">父菜单：</span></label>
                             <select class="form-control" name="display_name">
-                            @foreach($show['permission_list'] as $permission)
-                                @if (!empty($show['permission']))
-                            <option value="{{$permission['id']}}" {{($permission['id'] == $show['permission']->display_name)?'selected':''}}>{{$permission['description']}}</option>
-                                @else
-                            <option value="{{$permission['id']}}" 'selected'>{{$permission['description']}}</option>
-                                @endif
-                            @endforeach
+                                <option value="" 'selected'>ROOT</option>
+                                @foreach($show['permission_list'] as $permission)
+                                    @if (!empty($show['permission']))
+                                <option value="{{$permission['id']}}" {{($permission['id'] == $show['permission']->display_name)?'selected':''}}>{{$permission['description']}}</option>
+                                    @else
+                                <option value="{{$permission['id']}}" 'selected'>{{$permission['description']}}</option>
+                                    @endif
+                                @endforeach
                             </select>
-                            
+
                         </div>
                         <div class="form-group col-xs-6 col-md-6">
-                            <label><span style="width:155px;display:block;">权限名称：</span></label>
-                            <input name='description' type="text" class="form-control" placeholder="权限名称" 
+                            <label><span style="width:155px;display:block;">菜单名称：</span></label>
+                            <input name='description' type="text" class="form-control" placeholder="菜单名称" 
                             value='{{isset($show['permission']->description)?$show['permission']->description:''}}'/>
                         </div>
                         <div class="form-group col-xs-6 col-md-6">
-                            <label><span style="width:155px;display:block;">权限地址：</span></label>
-                            <input name='name' type="text" class="form-control" placeholder="权限地址" value='{{isset($show['permission']->name)?$show['permission']->name:''}}'/>
+                            <label><span style="width:200px;display:block;">菜单URL：</span></label>
+                            <input name='name' type="text" class="form-control" placeholder="示例:admin/" value='{{isset($show['permission']->name)?$show['permission']->name:''}}'/>
                         </div>
                         <div class="form-group col-xs-6 col-md-6">
                             <label><span style="width:155px;display:block;">正则地址：</span></label>
-                            <input name='power' type="text" class="form-control" placeholder="权限地址" value='{{isset($show['permission']->power)?$show['permission']->power:''}}'/>
+                            <input name='power' type="text" class="form-control" placeholder="示例: (.*)" value='{{isset($show['permission']->power)?$show['permission']->power:''}}'/>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10">
